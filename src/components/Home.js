@@ -17,6 +17,11 @@ export default function Home() {
 
   return (
     <div>
+        <div className="header">
+            <img className='logo' src='https://www.smarttalent.uy/innovaportal/file/6119/1/imagotipoconexio_rgb.png'/>
+            <h1 className="title" >Conexio | Jobs</h1>
+            <h1></h1>
+        </div>
       <ToastContainer />
       {jobs.length ? (
         <div className="card-list">

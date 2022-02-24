@@ -7,6 +7,27 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
+.logo {
+  height: 5vw;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2vw;
+  padding: 1.5vw;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 2px 8px 20px rgb(47, 47, 47);
+}
+
+.title {
+  color: rgb(83, 83, 83);
+  font-size: 2.5vw;
+}
+
 .card-list {
   display: flex;
   flex-wrap: wrap;
@@ -93,7 +114,25 @@ body {
 /* ------ MOBILE ------ */
 @media only screen and (max-width: 640px) {
 
+  .header {
+    gap: 4vw;
+    padding: 4vw;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+  }
+  
+  .logo {
+    height: 10vw;
+  }
+  
+  .title {
+    font-size: 6vw;
+  }
+
   .card-list {
+    padding-top: 20vw;
     display: flex;
     flex-wrap: unset;
     flex-direction: column;
