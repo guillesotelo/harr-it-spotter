@@ -1,38 +1,141 @@
-.App {
+body {
   text-align: center;
+  background-color: rgb(55, 133, 210) !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  margin: 2vw;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 2vw;
+  width: 20vw;
+  height: 15vw;
+  border-radius: 1vw !important;
+  background-color: rgb(233, 233, 233) !important;
+  transition: 0.7s;
+  box-shadow: 6px 6px 10px rgb(45, 45, 45);
+  text-align: center;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 8px 8px 22px rgb(45, 45, 45);
+}
+
+.location {
+  font-size: 0.8vw;
+  color: gray
+}
+
+.job-title {
+  font-size: 1.5vw;
+  height: 10%;
+  word-wrap: break-word;
+  padding: 0vw 2vw;
+}
+
+.underline {
+  border-top: 2px solid rgb(222, 222, 222);
+  width: 90%;
+}
+
+.card-btn {
+  background-color: rgb(55, 133, 210);
   color: white;
+  font-weight: bolder;
+  font-size: 0.8vw;
+  border: none;
+  border-radius: 1.5vw;
+  width: 90%;
+  height: 3vw;
+  transition: 0.7s;
+}
+.card-btn:hover {
+  opacity: 0.7;
 }
 
-.App-link {
-  color: #61dafb;
+.confirm-modal {
+  top: 20% !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.modal-content {
+  border-radius: 0.9vw !important;
+}
+
+.div-none {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  align-items: center;
+}
+
+.no-offers {
+  text-align: center;
+  margin-top: 20%;
+}
+
+.reload-btn {
+  width: 8vw;
+}
+
+/* ------ MOBILE ------ */
+@media only screen and (max-width: 640px) {
+
+  .card-list {
+    display: flex;
+    flex-wrap: unset;
+    flex-direction: column;
+    align-self: center;
+    margin: 2vw;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    margin: 5vw;
+    width: 90%;
+    height: 50vw;
+    border-radius: 3vw !important;
+  }
+
+  .location {
+    font-size: 2.7vw;
+    color: gray
+  }
+  
+  .job-title {
+    font-size: 6vw;
+    height: 10%;
+  }
+  
+  .card-btn {
+    font-size: 3vw;
+    border-radius: 4vw;
+    width: 90%;
+    height: 9vw;
+  }
+
+  .div-none {
+    gap: 25vw;
+  }
+  
+  .no-offers {
+    margin-top: 55%;
+    width: 90%;
+  }
+
+  .reload-btn {
+    width: 22vw;
   }
 }
