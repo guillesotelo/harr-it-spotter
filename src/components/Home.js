@@ -65,7 +65,7 @@ export default function Home() {
           <Button
             variant="success"
             onClick={() => {
-              toast.success(`Your candidancy has been sent successfully`, {
+              toast.success(`Your candidacy has been sent successfully`, {
                 autoClose: 2000,
               });
               const newJobs = jobs.filter((el) => el.job !== showModal.job);
